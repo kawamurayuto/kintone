@@ -14,6 +14,7 @@ class Kintone::Command
   autoload :SpaceThread, 'kintone/command/space_thread'
   autoload :SpaceMembers, 'kintone/command/space_members'
   autoload :File, 'kintone/command/file'
+  autoload :RecordStatus, 'kintone/command/record_status'
 
   # other than guest
   autoload :TemplateSpace, 'kintone/command/template_space'
@@ -79,6 +80,10 @@ class Kintone::Command
 
     def file(api)
       File.new(api)
+    end
+
+    def record_status(api)
+      RecordStatus.new(api)
     end
 
     # other than guest
